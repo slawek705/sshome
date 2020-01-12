@@ -19,7 +19,7 @@ from . import views
 
 urlpatterns = [
     path('', views.start_page_view),
-    #path('', include('start_page.urls')),
+    path('budzet_domowy', include('budzet_domowy.urls')),
     path('admin/', admin.site.urls, name='admin_site'),
     path('djangogirls/', include('blog.urls'), name='app_blog'),
 ]
