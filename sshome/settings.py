@@ -31,15 +31,16 @@ ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'sshome',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',
     'budzet_domowy',
-    'sshome',
+    'blog',
+
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+LOGIN_REDIRECT_URL = 'sshome'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

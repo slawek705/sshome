@@ -17,10 +17,8 @@
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
-                    <div class="post">
-                        <h1><a href="admin\">Panel Administracyjny</a></h1>
-                        <h1><a href="{% url 'app_blog' %}">Aplikacja Blog</a></h1>
-                    </div>
+                {% block content %}
+                {% endblock %}
                 </div>
             </div>
         </div>
